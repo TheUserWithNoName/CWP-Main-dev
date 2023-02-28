@@ -1,0 +1,1643 @@
+﻿# For on_actions launched by the code itself.
+on_yearly_pulse_country = {
+}
+
+on_yearly_pulse_country = {
+	effect = {
+		# IG leader death
+		random_list = {
+			1 = {
+				trigger_event = {
+					id = character_events.100
+				}
+			}
+			1 = {
+			}
+		}
+	}
+}
+
+on_monthly_pulse_country = {
+	effect = {
+		# Pollution Calculations
+		if = {
+			limit = {
+				exists = global_var:global_var_pollution
+				exists = global_var:global_var_temperature_celsius
+			}
+			set_global_variable = {
+				name = global_var_pollution
+				value = global_pollution_value
+			}
+			set_global_variable = {
+				name = global_var_temperature_celsius
+				value = global_temperature_value_celsius
+			}
+			# debug_log = debug_loc_string_pollution
+		}
+		#Corruption Calculations
+		if = {
+			limit = {
+				NOT = {
+					has_variable = var_corruption
+				}
+			}
+			set_variable = {
+				name = var_corruption
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				var:var_corruption < 0
+			}
+			set_variable = {
+				name = var_corruption
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				var:var_corruption >= 100
+			}
+			set_variable = {
+				name = var_corruption
+				value = 100
+			}
+		}
+		if = {
+			limit = {
+				exists = var:var_corruption 
+			}
+			change_variable = {
+				name = var_corruption
+				add = corruption_growth
+			}
+		}
+		# Adds appropriate modifier
+		if = {
+			limit = {
+				exists = var:var_corruption
+			}
+			remove_modifier = corruption_modifier_effects
+			add_modifier = {
+				name = corruption_modifier_effects
+				multiplier = corruption_modifier
+			}
+		}
+		else_if = {
+			set_variable = {
+				name = var_corruption
+				value = corruption_value
+			}
+		}
+		# UN Calculations
+		if = {
+			limit = {
+				exists = global_var:var_un_memberlist
+			}
+			set_global_variable = {
+				name = var_un_memberlist
+				value = 0
+			}
+			every_country = {
+				limit = {
+					has_variable = un_member
+				}
+				change_global_variable = {
+					name = var_un_memberlist
+					add = 1
+				}
+			}
+		}
+	}
+}
+
+on_half_yearly_pulse_country = {
+}
+
+on_five_year_pulse_country = {
+}
+
+on_decade_pulse_country = {
+}
+
+# Root = Character
+on_monthly_pulse_character = {
+}
+
+on_yearly_pulse_character = {
+}
+
+on_half_yearly_pulse_character = {
+}
+
+on_five_year_pulse_character = {
+}
+
+on_decade_pulse_character = {
+}
+
+on_half_yearly_pulse_state = {
+}
+
+on_yearly_pulse_state = {
+	on_actions = {
+	}
+}
+
+on_five_year_pulse_state = {
+}
+
+on_decade_pulse_state = {
+}
+
+# Root = attacker or defender country
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_started = {
+	effect = {
+	}
+}
+
+# Root = attacker or defender country
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_ended = {
+}
+
+# Root = attacker or defender country
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_won = {
+}
+
+# Root = attacker or defender country
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_lost = {
+}
+
+# Root = Building
+on_building_built = {
+}
+
+# Root = Building
+on_start_expanding_building = {
+}
+
+# Root = Building
+on_building_expanded = {
+}
+
+# Does not appear
+on_deactivate_link = {
+}
+
+# Root = From Market
+# scope:market = Market merging into
+# scope:trade_center = Trade Center state of root
+on_merge_markets = {
+}
+
+# Root = State having the link retargeted
+on_retarget_link = {
+}
+
+# Root = The newly created market
+on_create_market = {
+}
+
+# Root = The applicable country
+# scope:technology = The technology type they started to research
+on_research_technology_started = {
+	effect = {
+		if = {
+			limit = {
+				has_journal_entry = je_tutorial_research_technology
+			}
+			je:je_tutorial_research_technology = {
+				set_target_technology = scope:technology
+			}
+			set_variable = tut_began_new_research
+		}
+	}
+}
+
+# Root = The applicable country
+# scope:technology = The technology type they just acquired
+on_acquired_technology = {
+	effect = {
+		if = {
+			limit = {
+				has_game_started = yes
+			}
+			post_notification = acquired_technology_notification
+		}
+		if = {
+			limit = {
+				is_player = yes
+				has_technology_researched = pumpjacks
+				NOT = {
+					has_variable = first_oil_discovered
+				}
+			}
+			set_variable = first_oil_discovered
+			if = {
+				limit = {
+					any_scope_state = {
+						has_potential_resource = bg_oil_extraction
+					}
+				}
+				random_scope_state = {
+					limit = {
+						has_potential_resource = bg_oil_extraction
+					}
+					force_resource_discovery = bg_oil_extraction
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						has_overlapping_interests = ROOT
+						any_scope_state = {
+							has_potential_resource = bg_oil_extraction
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						has_overlapping_interests = ROOT
+						any_scope_state = {
+							has_potential_resource = bg_oil_extraction
+						}
+					}
+					random_scope_state = {
+						limit = {
+							has_potential_resource = bg_oil_extraction
+						}
+						force_resource_discovery = bg_oil_extraction
+					}
+				}
+			}
+			else = {
+				random_state = {
+					limit = {
+						has_potential_resource = bg_oil_extraction
+					}
+					force_resource_discovery = bg_oil_extraction
+				}
+			}
+		}
+	}
+}
+
+# Root = The applicable country
+# scope:technology = The technology type that has started to spread to them
+on_spreading_technology = {
+	effect = {
+		post_notification = spreading_technology_notification
+	}
+}
+
+# Fires for all countries with an interest marker in the play's region
+# Root = Country who owns the interest marker
+# scope:diplomatic_play = The diplomatic play that has been started
+on_diplomatic_play_started = {
+}
+
+# Root = Character
+on_character_creation = {
+}
+
+# Root = Character
+on_character_death = {
+	effect = {
+		if = {
+			limit = {
+				is_ruler = yes
+				exists = c:HAW
+				owner = c:HAW
+				owner = {
+					has_law = law_type:law_monarchy
+					NOT = {
+						has_variable = death_of_kamehameha
+					}
+					NOT = {
+						has_global_variable = gp_hawaii_interest
+					}
+				}
+			}
+			owner = {
+				trigger_event = hawaii_events.1
+			}
+		}
+		if = {
+			limit = {
+				has_variable = expedition_leader_var
+			}
+			owner = {
+				trigger_event = expedition_events.110
+			}
+		}
+	}
+}
+
+# Root = Character
+on_new_ruler = {
+	#
+}
+
+# Root = Country
+on_country_default = {
+	effect = {
+		add_modifier = country_default
+	}
+}
+
+# Root = Country
+on_country_no_longer_default = {
+	effect = {
+		remove_modifier = country_default
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action = {
+	effect = {
+		post_notification = diplomatic_action_notification
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal = {
+	effect = {
+		post_proposal = proposal_diplomatic_action
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_accepted = {
+	effect = {
+		post_notification = diplomatic_proposal_accepted
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_owe_obligation = {
+	effect = {
+		post_proposal = proposal_diplomatic_action_owe_obligation
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_call_in_obligation = {
+	effect = {
+		post_proposal = proposal_diplomatic_action_call_in_obligation
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_declined = {
+	effect = {
+		post_notification = diplomatic_proposal_declined
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_break = {
+	effect = {
+		post_notification = diplomatic_action_break_notification
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_break = {
+	effect = {
+		post_proposal = proposal_break_pact
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_break_accepted = {
+	effect = {
+		post_notification = diplomatic_proposal_break_accepted
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_break_owe_obligation = {
+	effect = {
+		post_proposal = proposal_break_pact_owe_obligation
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_break_call_in_obligation = {
+	effect = {
+		post_proposal = proposal_break_pact_call_in_obligation
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_proposal_break_declined = {
+	effect = {
+		post_notification = diplomatic_proposal_break_declined
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_third_party = {
+	effect = {
+		post_notification = diplomatic_proposal_third_party_notification
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_third_party_accepted = {
+	effect = {
+		post_notification = diplomatic_proposal_third_party_accepted
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_third_party_declined = {
+	effect = {
+		post_notification = diplomatic_proposal_third_party_declined
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_third_party_break = {
+	effect = {
+		post_notification = diplomatic_proposal_third_party_break_notification
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_third_party_break_accepted = {
+	effect = {
+		post_notification = diplomatic_proposal_third_party_break_accepted
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_third_party_break_declined = {
+	effect = {
+		post_notification = diplomatic_proposal_third_party_break_declined
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomats_expelled = {
+}
+
+# Root = Diplomatic Pact
+on_diplomatic_pact_auto_break = {
+	effect = {
+		post_notification = diplomatic_pact_auto_break_notification
+	}
+}
+
+# Root = Diplomatic Pact
+on_diplomatic_pact_third_party_auto_break = {
+	effect = {
+		post_notification = diplomatic_pact_third_party_auto_break_notification
+	}
+}
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_independent = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					country_has_primary_culture = cu:ashkenazi
+				}
+				NOT = {
+					s:STATE_PALESTINE = {
+						is_homeland = cu:ashkenazi
+					}
+				}
+			}
+			s:STATE_PALESTINE = {
+				add_homeland = sephardic
+				add_homeland = ashkenazi
+			}
+		}
+		scope:target = {
+			if = {
+				limit = {
+					country_has_state_religion = rel:theravada
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_theravada_monks
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:orthodox
+					OR = {
+						NOT = {
+							exists = c:RUS
+						}
+						NOT = {
+							c:RUS = scope:target
+						}
+					}
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_orthodox_patriarch
+				}
+			}
+			if = {
+				limit = {
+					exists = c:RUS
+					c:RUS = scope:target
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_russian_patriarch
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:hindu
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_hindu_priesthood
+					remove_ideology = ideology_hindu_moralist
+					add_ideology = ideology_hindu_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:mahayana
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_vajrayana_monks
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:sikh
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_sikh_priesthood
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_sikh_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:oriental_orthodox
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_oriental_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_oriental_orthodox_patriarch
+				}
+			}
+		}
+	}
+}
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_own_subject = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					country_has_primary_culture = cu:ashkenazi
+				}
+				NOT = {
+					s:STATE_PALESTINE = {
+						is_homeland = cu:ashkenazi
+					}
+				}
+			}
+			s:STATE_PALESTINE = {
+				add_homeland = sephardic
+				add_homeland = ashkenazi
+			}
+		}
+		scope:target = {
+			if = {
+				limit = {
+					country_has_state_religion = rel:theravada
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_theravada_monks
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					exists = c:RUS
+					c:RUS = scope:target
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_russian_patriarch
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:orthodox
+					OR = {
+						NOT = {
+							exists = c:RUS
+						}
+						NOT = {
+							c:RUS = scope:target
+						}
+					}
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_orthodox_patriarch
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:hindu
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_hindu_priesthood
+					remove_ideology = ideology_hindu_moralist
+					add_ideology = ideology_hindu_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:vajrayana
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_vajrayana_monks
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:sikh
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_sikh_priesthood
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_sikh_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:oriental_orthodox
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_oriental_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_oriental_orthodox_patriarch
+				}
+			}
+		}
+	}
+}
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_overlord_subject = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					country_has_primary_culture = cu:ashkenazi
+				}
+				NOT = {
+					s:STATE_PALESTINE = {
+						is_homeland = cu:ashkenazi
+					}
+				}
+			}
+			s:STATE_PALESTINE = {
+				add_homeland = sephardic
+				add_homeland = ashkenazi
+			}
+		}
+		scope:target = {
+			if = {
+				limit = {
+					country_has_state_religion = rel:theravada
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_theravada_monks
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:orthodox
+					OR = {
+						NOT = {
+							exists = c:RUS
+						}
+						NOT = {
+							c:RUS = scope:target
+						}
+					}
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_orthodox_patriarch
+				}
+			}
+			if = {
+				limit = {
+					exists = c:RUS
+					c:RUS = scope:target
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_russian_patriarch
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:hindu
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_hindu_priesthood
+					remove_ideology = ideology_hindu_moralist
+					add_ideology = ideology_hindu_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:vajrayana
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_vajrayana_monks
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_buddhist_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:sikh
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_sikh_priesthood
+					remove_ideology = ideology_moralist
+					add_ideology = ideology_sikh_moralist
+				}
+			}
+			if = {
+				limit = {
+					country_has_state_religion = rel:oriental_orthodox
+				}
+				ig:ig_devout = {
+					set_interest_group_name = ig_oriental_orthodox_church
+					remove_ideology = ideology_patriarchal
+					add_ideology = ideology_oriental_orthodox_patriarch
+				}
+			}
+		}
+	}
+}
+
+# Root = State
+on_migration_target_created = {
+	effect = {
+		post_notification = migration_target_created
+	}
+}
+
+# Root = State
+on_migration_target_created_other = {
+	effect = {
+		post_notification = migration_target_created_other
+	}
+}
+
+# Root = State
+on_resource_discovered = {
+}
+
+# Root = State
+on_resource_depleted = {
+	effect = {
+		owner = {
+			post_notification = resource_depleted
+		}
+	}
+}
+
+# Root = Country
+on_peace_agreement_signed_war_leader = {
+	effect = {
+		post_notification = peace_agreement_signed_war_leader
+	}
+}
+
+# Root = Country
+on_peace_agreement_signed_war_participant = {
+	effect = {
+		post_notification = peace_agreement_signed_war_participant
+	}
+}
+
+# Root = Country
+on_peace_agreement_signed_non_participant = {
+	effect = {
+		post_notification = peace_agreement_signed_non_participant
+	}
+}
+
+# Root = Country
+on_capitulation = {
+	effect = {
+	}
+}
+
+# Root = Country
+on_self_capitulated_notification = {
+	effect = {
+		post_notification = self_capitulated
+		set_variable = {
+			name = recent_capitulation
+			months = short_modifier_time
+		}
+	}
+}
+
+# Root = Country
+on_enemy_capitulated_notification = {
+	effect = {
+		post_notification = enemy_capitulated
+	}
+}
+
+# Root = Country
+on_ally_capitulated_notification = {
+	effect = {
+		post_notification = ally_capitulated
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_start = {
+	effect = {
+		post_notification = diplo_play_start_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_start_third_party = {
+	effect = {
+		post_notification = diplo_play_start_third_party_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_back_down = {
+	effect = {
+		post_notification = diplo_play_back_down_notification
+		if = {
+			limit = {
+				scope:notification_target = {
+					is_player = yes
+				}
+				scope:actor = {
+					is_player = no
+				}
+			}
+			set_global_variable = achievement_mightier_than_the_sword
+		}
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_back_down_involved = {
+	effect = {
+		post_notification = diplo_play_back_down_involved_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_join_side = {
+	effect = {
+		post_notification = diplo_play_join_side_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_abandon_side = {
+	effect = {
+		post_notification = diplo_play_abandon_side_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_war_start = {
+	effect = {
+		post_notification = diplo_play_war_start_notification
+		post_notification = diplo_play_war_start_third_party_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_subject_released = {
+	effect = {
+		post_notification = diplo_play_subject_released_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_subject_released_overlord = {
+	effect = {
+		post_notification = diplo_play_subject_released_overlord_notification
+	}
+}
+
+# Root = Diplomatic Play
+# country = Country switched to
+# previous = Country switched from
+on_diplo_play_switch_sides = {
+	effect = {
+		set_global_variable = achievement_revo_needed
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_declare_neutrality = {
+	effect = {
+		post_notification = diplo_play_declare_neutrality_notification
+	}
+}
+
+# Root = Diplomatic Play
+on_sway_offer = {
+	effect = {
+		post_proposal = proposal_sway_offer
+	}
+}
+
+# Root = Diplomatic Play
+on_sway_offer_owe_obligation = {
+	effect = {
+		post_proposal = proposal_sway_offer_owe_obligation
+	}
+}
+
+# Root = Diplomatic Play
+on_sway_offer_accepted = {
+	effect = {
+		post_notification = sway_offer_accepted
+	}
+}
+
+# Root = Diplomatic Play
+on_country_swayed = {
+	effect = {
+		post_notification = country_swayed
+	}
+}
+
+# Root = Diplomatic Play
+on_sway_offer_rejected = {
+	effect = {
+		post_notification = sway_offer_rejected
+	}
+}
+
+# Root = Building
+on_production_method_changed = {
+	effect = {
+		owner = {
+			if = {
+				limit = {
+					has_journal_entry = je_tutorial_change_production_method
+					je:je_tutorial_change_production_method.target = root
+				}
+				set_variable = has_changed_production_method
+			}
+		}
+	}
+}
+
+# Root = owner Country of the Law
+# executed when enactment of any law begins
+on_law_enactment_started = {
+	effect = {
+		if = {
+			limit = {
+				has_law = law_type:law_monarchy
+				OR = {
+					is_enacting_law = law_type:law_presidential_republic
+					is_enacting_law = law_type:law_parliamentary_republic
+					is_enacting_law = law_type:law_council_republic
+				}
+			}
+			set_variable = {
+				name = abolishing_monarchy_var
+				value = 0
+			}
+			add_journal_entry = {
+				type = je_abolish_monarchy
+			}
+		}
+	}
+}
+
+# Root = owner Country of the Law
+# executed when the end of a checkpoint is reached and the result is success
+# (currently, this means the law will get enacted so it will be followed by
+# on_law_enactment_ended and on_law_enacted).
+#
+# NOTE: at the point in time when this on-action is triggered, the law
+# is still considered being enacted, therefore the `currently_enacting_law` link
+# will work as expected, even though the enactment is about to end
+on_law_checkpoint_success = {
+	effect = {
+	}
+}
+
+# Root = owner Country of the Law
+# executed when the end of a checkpoint is reached and the result is advance
+on_law_checkpoint_advance = {
+}
+
+# Root = owner Country of the Law
+# executed when the end of a checkpoint is reached and the result is debate
+on_law_checkpoint_debate = {
+}
+
+# Root = owner Country of the Law
+# executed when the end of a checkpoint is reached and the result is stall
+#
+# NOTE: at the point in time when this on-action is triggered, the law
+# is still considered being enacted, therefore the `currently_enacting_law` link
+# will work as expected, even if the resulting event is particularly bad and
+# will proceed to stop the enactment
+on_law_checkpoint_stall = {
+}
+
+# Root = owner Country of the Law
+# executed when enactment stops for any reason. Could be because the law has
+# been enacted, or because the enactment has been stopped by the player.
+#
+# NOTE: at the point in time when this on-action is triggered, the law
+# is still considered being enacted, therefore the `currently_enacting_law` link
+# will work as expected, even though the enactment is _just_ about to end
+on_law_enactment_ended = {
+	effect = {
+	}
+}
+
+# Root owner Country of the Law
+# executed when the law is activated for any reason. It's usually because it
+# has been enacted, but script can activate laws directly without going through
+# the enactment process. Normally, it's immediately preceded by
+# on_law_enactment_ended, but if a law is directly set by script, thus
+# bypassing the enactment process, this will execute while
+# on_law_enactment_ended will not
+#
+# NOTE: unlike the other on_law_<something> on-actions, at the point in time
+# when this is triggered the law that was enacted is no longer considered being
+# enacted. Therefore using the `currently_enacting_law` link will return the
+# null law
+on_law_activated = {
+	effect = {
+	}
+}
+
+# Root = Institution
+on_investment_increased = {
+	effect = {
+		post_notification = institution_investment_increased
+	}
+}
+
+# Root = Institution
+on_investment_decreased = {
+	effect = {
+		post_notification = institution_investment_decreased
+	}
+}
+
+# Root = Country
+# scope:target = Uprising country
+on_revolution_start = {
+	effect = {
+		if = {
+			limit = {
+				has_journal_entry = je_warlord_china
+				NOT = {
+					has_variable = china_warlord_explosion_revolution
+				}
+			}
+			post_notification = warlord_china_explosion_point_add
+			change_variable = {
+				name = china_warlord_explosion
+				add = 1
+			}
+			set_variable = china_warlord_explosion_revolution
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_meiji_restoration
+				scope:target = {
+					ig:ig_elites = {
+						is_in_government = yes
+					}
+				}
+			}
+			set_variable = anti_shogunate_civil_war
+		}
+	}
+}
+
+# Root = Country
+# scope:target = Uprising country
+on_revolution_end = {
+	effect = {
+	}
+}
+
+# Root = Country
+# This action is triggered after `on_revolution_end`
+on_civil_war_won = {
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = achievement_revo_needed
+			}
+			set_global_variable = achievement_revolutionary
+		}
+		if = {
+			limit = {
+				has_journal_entry = je_meiji_restoration
+				has_variable = anti_shogunate_civil_war
+				has_variable = shogunate_var
+			}
+			change_variable = {
+				name = shogunate_var
+				add = 120
+			}
+			remove_variable = anti_shogunate_civil_war
+		}
+	}
+}
+
+# Root = Country
+on_wargoal_enforced = {
+	effect = {
+		set_variable = {
+			name = recently_won_war
+			days = 600
+			value = yes
+		}
+	}
+}
+
+# Root = Interest Group
+on_ig_resigned_government = {
+	effect = {
+		post_notification = ig_resigned_government
+	}
+}
+
+# Root = Culture
+on_new_culture_obsession = {
+	effect = {
+		post_notification = new_culture_obsession
+	}
+}
+
+# Root = Country
+on_rank_changed = {
+	effect = {
+		post_notification = rank_changed_notification
+	}
+}
+
+# Root = Character
+on_heir_born = {
+	effect = {
+		post_notification = heir_born_notification
+	}
+}
+
+# Root = Home Country
+# scope:target = Secession country
+on_secession_country_helped_by_home_country = {
+	effect = {
+		annex = scope:target
+	}
+}
+
+# Root = Home Country
+# scope:target = Secession country
+on_secession_country_not_helped_by_home_country = {
+	effect = {
+		trigger_event = {
+			id = civil_war_events.1
+			days = 0
+		}
+	}
+}
+
+# Root = Diplomatic Play
+# scope:actor = War Goal Owner
+on_wargoal_added = {
+	effect = {
+		post_notification = wargoal_added
+	}
+}
+
+# Root = Diplomatic Play
+# scope:actor = War Goal Owner
+on_wargoal_removed = {
+	effect = {
+		post_notification = wargoal_removed
+	}
+}
+
+# Root = Diplomatic Play
+# scope:actor = Initiator country
+# scope:target = Target country
+on_war_end = {
+}
+
+# Root = journal entry
+on_journal_entry_activated = {
+	effect = {
+		post_notification = journal_entry_activated
+	}
+}
+
+# Root = journal entry
+on_journal_entry_deactivated = {
+	effect = {
+		post_notification = journal_entry_deactivated
+	}
+}
+
+# Root = journal entry
+on_journal_entry_completed = {
+	effect = {
+		post_notification = journal_entry_completed
+	}
+}
+
+# Root = journal entry
+on_journal_entry_failed = {
+}
+
+# Root = country
+on_native_uprising = {
+	effect = {
+		post_notification = native_uprising_notification
+	}
+}
+
+# Root = state
+on_state_incorporation = {
+	effect = {
+	}
+}
+
+# Root = political movement
+on_political_movement_formed = {
+	effect = {
+		post_notification = political_movement_formed
+	}
+}
+
+# Root = political movement
+on_political_movement_disbanded = {
+	effect = {
+		post_notification = political_movement_disbanded
+	}
+}
+
+# Root = Colony state
+on_colony_created = {
+	effect = {
+		owner = {
+			if = {
+				limit = {
+					has_journal_entry = je_tutorial_colonize_state
+				}
+				root = {
+					set_variable = {
+						name = tut_colony_target
+					}
+				}
+			}
+		}
+	}
+}
+
+# Root = Strategic Region
+# scope:actor = Aggressor country
+# scope:target = Target country
+on_diplomatic_incident = {
+	effect = {
+	}
+}
+
+# Root = Objective
+on_sub_objective_completed = {
+}
+
+# Root = Objective
+on_sub_objective_failed = {
+}
+
+# Root = Objective
+on_objective_completed = {
+	effect = {
+		debug_log = "Objective completed"
+	}
+}
+
+# Root = Country
+# scope:target = Party created
+on_party_created = {
+	effect = {
+		debug_log = "[SCOPE.sParty('target').GetNameNoFormatting] Created"
+	}
+}
+
+# Root = Country
+# scope:target = Party disbanded
+on_party_disbanded = {
+	effect = {
+		debug_log = "[SCOPE.sParty('target').GetNameNoFormatting] Disbanded"
+	}
+}
+
+# Root = Country
+on_election_campaign_start = {
+	effect = {
+		debug_log = "Election Campaign Started"
+	}
+}
+
+# Root = Country
+on_election_campaign_end = {
+	effect = {
+		debug_log = "Election Campaign Ended"
+	}
+}
+
+# Root = Country
+on_obligation_owed_by_us_expired = {
+	effect = {
+		post_notification = obligation_owed_by_us_expired
+	}
+}
+
+# Root = Country
+on_obligation_owed_to_us_expired = {
+	effect = {
+		post_notification = obligation_owed_to_us_expired
+	}
+}
+
+# Root = Country
+on_start_supporting_unification = {
+	effect = {
+		post_notification = start_supporting_unification
+	}
+}
+
+# Root = Country
+on_unification_candidate_added = {
+	effect = {
+		post_notification = unification_candidate_added
+	}
+}
+
+# Root = Country
+on_unification_candidate_removed = {
+	effect = {
+		post_notification = unification_candidate_removed
+	}
+}
+
+# Root = Country
+on_stop_supporting_unification = {
+	effect = {
+		post_notification = stop_supporting_unification
+	}
+}
+
+# Root = Character
+on_enemy_convoys_raided = {
+	effect = {
+		post_notification = enemy_convoys_raided
+	}
+}
+
+# Root = Character
+on_our_convoys_raided = {
+	effect = {
+		post_notification = our_convoys_raided
+	}
+}
+
+# Root = Country
+on_repudiate_obligation = {
+	effect = {
+		scope:target_country = {
+			change_relations = {
+				country = root
+				value = -50
+			}
+			hidden_effect = {
+				random_list = {
+					50 = {
+						if = {
+							limit = {
+								country_rank > root.country_rank
+							}
+							set_secret_goal = {
+								country = root
+								secret_goal = dominate
+							}
+						}
+						else = {
+							set_secret_goal = {
+								country = root
+								secret_goal = antagonize
+							}
+						}
+					}
+					50 = {
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = {
+					this = scope:target_country
+				}
+				root = {
+					owes_obligation_to = prev
+				}
+			}
+			change_relations = {
+				country = root
+				value = -30
+			}
+			hidden_effect = {
+				random_list = {
+					25 = {
+						if = {
+							limit = {
+								country_rank > root.country_rank
+							}
+							set_secret_goal = {
+								country = root
+								secret_goal = dominate
+							}
+						}
+						else = {
+							set_secret_goal = {
+								country = root
+								secret_goal = antagonize
+							}
+						}
+					}
+					75 = {
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			# Should not stack the modifier
+			if = {
+				limit = {
+					has_modifier = repudiated_obligation
+				}
+				remove_modifier = repudiated_obligation
+			}
+		}
+		add_modifier = {
+			name = repudiated_obligation
+			months = normal_modifier_time
+			is_decaying = yes
+		}
+	}
+}
+
+# Root = Character
+on_character_recruitment = {
+	effect = {
+		owner = {
+			if = {
+				limit = {
+					has_journal_entry = je_tutorial_recruit_promote_commander
+					# TODO PRCAL-22740
+					# je:je_tutorial_recruit_promote_commander = {
+					#	NOT = {
+					#		has_variable = tut_commander_target
+					#	}
+					# }
+				}
+				je:je_tutorial_recruit_promote_commander = {
+					set_variable = {
+						name = tut_commander_target
+						value = root
+					}
+					set_variable = {
+						name = tut_commander_target_initial_rank
+						value = root.commander_rank
+					}
+				}
+			}
+		}
+	}
+}
+
+# Root = invaded country
+# scope:actor = invading country
+# scope:admiral = invading admiral
+# scope:general = invading general
+# scope:state = location state
+on_naval_invasion = {
+	effect = {
+		post_notification = naval_invasion_against_us
+	}
+}
+
+# State Scope
+on_monthly_pulse_state = {
+	#in every state, if the number of skyscrapers is greater than the number of urban centers, then the state is too urbanized. A modifier is applied to the state that greatly increases the upkeep of each skyscraper. The modifier is removed when the number of skyscrapers is less than the number of urban centers.
+	effect = {
+		if = {
+			limit = {
+				has_building = building_skyscraper
+			}
+			every_scope_building = {
+				limit = {
+					is_building_type = building_skyscraper
+				}
+				save_scope_as = skyscraper_scope
+			}
+			every_scope_building = {
+				limit = {
+					is_building_type = building_urban_center
+				}
+				save_scope_as = urban_center_scope
+			}
+			#apply the modifier to skyscrapers in the state to reduce their throughput by (1/3)x^2 where x is the level of skyscrapers in the state
+			if = {
+				limit = {
+					scope:skyscraper_scope = {
+						AND = {
+							level > scope:urban_center_scope.level
+							NOT = {
+								has_modifier = too_many_skyscrapers
+							}
+						}
+					}
+				}
+				scope:skyscraper_scope = {
+					add_modifier = {
+						name = too_many_skyscrapers
+						multiplier = 100
+						#TODO value is placeholder, should be dynamic as described above however, getting this to work has been difficult as the multiplier field doesn't accept inline math or a variable as a value.
+					}
+				}
+			}
+			else = {
+				remove_modifier = too_many_skyscrapers
+			}
+		}
+	}
+}

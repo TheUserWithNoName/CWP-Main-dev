@@ -1,0 +1,1449 @@
+﻿#########################################################################
+################################# ERA 1 #################################
+#########################################################################
+urbanization = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 10
+		state_infrastructure_from_population_add = 0.2
+		state_infrastructure_from_population_max_add = 40
+		market_land_trade_capacity_add = 50
+	}
+	unlocking_technologies = {
+	}
+}
+
+scientific_method = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+	}
+}
+
+pre-war_ideological_thought = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+	}
+}
+
+modernism = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		urbanization
+	}
+}
+
+bureaucratic_systems = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		urbanization
+	}
+}
+
+pre-war_healthcare = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		urbanization
+		scientific_method
+	}
+}
+
+vitamin_synthesis = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_mortality_mult = -0.1
+	}
+	unlocking_technologies = {
+		scientific_method
+	}
+}
+
+observatories = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		scientific_method
+	}
+}
+
+environmentalism = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_expected_sol_from_literacy = 1
+	}
+	unlocking_technologies = {
+		pre-war_ideological_thought
+	}
+}
+
+first_wave_feminism = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		pre-war_ideological_thought
+	}
+}
+
+prefabrication = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 10
+	}
+	unlocking_technologies = {
+		urbanization
+	}
+}
+
+pre-war_policing = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_institution_police_max_investment_add = 1
+	}
+	unlocking_technologies = {
+		modernism
+		bureaucratic_systems
+	}
+}
+
+public_transportation = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		modernism
+	}
+}
+
+keynesian_macroeconomics = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_tax_capacity_mult = 0.05
+	}
+	unlocking_technologies = {
+		bureaucratic_systems
+	}
+}
+
+early_skyscrapers = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 10
+	}
+	unlocking_technologies = {
+		prefabrication
+	}
+}
+
+flat_currencies = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_tax_capacity_mult = 0.05
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.02
+	}
+	unlocking_technologies = {
+		keynesian_macroeconomics
+	}
+}
+
+intravenous_anesthetic = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		pre-war_healthcare
+	}
+}
+
+penicillin = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_institution_health_system_max_investment_add = 1
+		state_mortality_mult = -0.1
+	}
+	unlocking_technologies = {
+		pre-war_healthcare
+	}
+}
+
+dpt_vaccine = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		pre-war_healthcare
+		vitamin_synthesis
+	}
+}
+
+transorbital_lobotomies = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		intravenous_anesthetic
+		penicillin
+	}
+}
+
+pre-war_antibiotics = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		penicillin
+	}
+}
+
+meningitis_treatment = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		dpt_vaccine
+	}
+}
+
+international_relations = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_diplomatic_play_maneuvers_add = 25
+		country_allow_multiple_alliances = yes
+	}
+	unlocking_technologies = {
+		pre-war_ideological_thought
+	}
+}
+
+#########################################################################
+################################# ERA 2 #################################
+#########################################################################
+commercial_elevators = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 5
+	}
+	unlocking_technologies = {
+		early_skyscrapers
+	}
+}
+
+baby_and_child_care = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		public_transportation
+	}
+}
+
+disposable_nappy = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		baby_and_child_care
+	}
+}
+
+central_bank_independence = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_tax_capacity_mult = 0.05
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.02
+	}
+	unlocking_technologies = {
+		flat_currencies
+	}
+}
+
+international_monetary_system = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_tax_capacity_mult = 0.05
+	}
+	unlocking_technologies = {
+		central_bank_independence
+	}
+}
+
+bretton_woods_agreement = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_tax_collection_mult = 0.05
+	}
+	unlocking_technologies = {
+		central_bank_independence
+	}
+}
+
+trauma_centers = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		transorbital_lobotomies
+		pre-war_antibiotics
+	}
+}
+
+field_strain = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		meningitis_treatment
+		pre-war_antibiotics
+	}
+}
+
+chemotherapy = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_institution_health_system_max_investment_add = 1
+		state_mortality_mult = -0.1
+	}
+	unlocking_technologies = {
+		trauma_centers
+		field_strain
+	}
+}
+
+tuberculosis_treatment = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		field_strain
+	}
+}
+
+all_glass_syringes = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		chemotherapy
+	}
+}
+
+pneumonia_treatment = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		tuberculosis_treatment
+	}
+}
+
+evolutionary_synthesis = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		observatories
+	}
+}
+
+media = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		observatories
+	}
+}
+
+technology_institutes = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		evolutionary_synthesis
+	}
+}
+
+military_research_facilities = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		technology_institutes
+	}
+}
+
+social_research_facilities = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		technology_institutes
+	}
+}
+
+united_nations = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		international_relations
+	}
+}
+
+international_whaling_commission = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		international_relations
+	}
+}
+
+nature_conservation = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_expected_sol_mult = 0.05
+	}
+	unlocking_technologies = {
+		international_relations
+		environmentalism
+	}
+}
+
+blocs = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_diplomatic_play_maneuvers_add = 25
+		country_authority_mult = 0.1
+	}
+	unlocking_technologies = {
+		united_nations
+	}
+}
+
+world_health_organization = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		united_nations
+	}
+}
+
+#########################################################################
+################################# ERA 3 #################################
+#########################################################################
+computerized_bureaucracy = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		baby_and_child_care
+		commercial_elevators
+	}
+}
+
+advanced_public_transportation = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		computerized_bureaucracy
+	}
+}
+
+international_airports = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		advanced_public_transportation
+	}
+}
+
+automobile_speed_measurement_devices = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		advanced_public_transportation
+	}
+}
+
+activist_monetary_policies = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_minting_mult = 0.1
+		country_loan_interest_rate_add = -0.02
+	}
+	unlocking_technologies = {
+		bretton_woods_agreement
+	}
+}
+
+currency_stabilization = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_tax_capacity_mult = 0.05
+	}
+	unlocking_technologies = {
+		activist_monetary_policies
+	}
+}
+
+norethisterone = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		all_glass_syringes
+	}
+}
+
+polio_immunization = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_mortality_mult = -0.1
+	}
+	unlocking_technologies = {
+		all_glass_syringes
+		pneumonia_treatment
+	}
+}
+
+contraceptive_pills = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		norethisterone
+	}
+}
+
+lung_cancer = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		contraceptive_pills
+	}
+}
+
+allotransplantation = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		polio_immunization
+	}
+}
+
+blood_typing = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		allotransplantation
+	}
+}
+
+space_agencies = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		military_research_facilities
+		social_research_facilities
+	}
+}
+
+conformity_experiments = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		social_research_facilities
+	}
+}
+
+aquatic_ape_hypothesis = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		conformity_experiments
+	}
+}
+
+transcontinental_television_services = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		media
+	}
+}
+
+abstract_expressionism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		media
+	}
+}
+
+cinerama_widescreen_film_system = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		transcontinental_television_services
+	}
+}
+
+decolonization = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		blocs
+	}
+}
+
+proxy_wars = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		decolonization
+	}
+}
+
+counterculture = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		nature_conservation
+		first_wave_feminism
+	}
+}
+
+sexual_revolution = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		counterculture
+	}
+}
+
+civil_rights = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		counterculture
+	}
+}
+
+drug_revolution = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		counterculture
+	}
+}
+
+second_wave_feminism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		sexual_revolution
+		civil_rights
+		drug_revolution
+	}
+}
+
+#########################################################################
+################################# ERA 4 #################################
+#########################################################################
+anti_crime_initiatives = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		international_airports
+	}
+}
+
+improved_computerization = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 15
+	}
+	unlocking_technologies = {
+		anti_crime_initiatives
+	}
+}
+
+home_security_system = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		anti_crime_initiatives
+	}
+}
+
+hydraulic_breakers = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		improved_computerization
+	}
+}
+
+public_choice_theory = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		activist_monetary_policies
+	}
+}
+
+automatic_teller_machines = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		public_choice_theory
+	}
+}
+
+insulin = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		lung_cancer
+	}
+}
+
+portable_defibrillator = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		insulin
+	}
+}
+
+measles_vaccine = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_mortality_mult = -0.1
+	}
+	unlocking_technologies = {
+		blood_typing
+	}
+}
+
+bone_marrow_transplants = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		measles_vaccine
+	}
+}
+
+polyu_experiment = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		aquatic_ape_hypothesis
+	}
+}
+
+seafloor_spreading = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		aquatic_ape_hypothesis
+	}
+}
+
+charged_coupled_devices = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		cinerama_widescreen_film_system
+	}
+}
+
+#########################################################################
+################################# ERA 5 #################################
+#########################################################################
+tube_bundled_systems = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		hydraulic_breakers
+	}
+}
+
+skyscrapers = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 5
+	}
+	unlocking_technologies = {
+		tube_bundled_systems
+	}
+}
+
+computer_aided_design = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 10
+	}
+	unlocking_technologies = {
+		tube_bundled_systems
+	}
+}
+
+monetarism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		public_choice_theory
+	}
+}
+
+mri_imaging = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		portable_defibrillator
+	}
+}
+
+dna_sequencing = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		country_institution_police_max_investment_add = 1
+	}
+	unlocking_technologies = {
+		bone_marrow_transplants
+	}
+}
+
+invitro_fertilization = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		mri_imaging
+	}
+}
+
+pure_white_deadly = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		dna_sequencing
+	}
+}
+
+punctuated_equilibrium = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		polyu_experiment
+	}
+}
+
+digital_image_processing = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		charged_coupled_devices
+	}
+}
+
+portable_digital_cameras = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		digital_image_processing
+	}
+}
+
+patent_cooperation = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		proxy_wars
+	}
+}
+
+early_climatology = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		patent_cooperation
+	}
+}
+
+social_studies = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		second_wave_feminism
+	}
+}
+
+supersonic_airliners = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		social_studies
+	}
+}
+
+#########################################################################
+################################# ERA 6 #################################
+#########################################################################
+pressed_concrete = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		skyscrapers
+	}
+}
+
+word_processors = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		computer_aided_design
+	}
+}
+
+microfoundations = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		monetarism
+	}
+}
+
+stable_equilibria = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		microfoundations
+	}
+}
+
+e_commerce = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		microfoundations
+	}
+}
+
+antiretroviral_drugs = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_mortality_mult = -0.1
+	}
+	unlocking_technologies = {
+		invitro_fertilization
+	}
+}
+
+gene_therapy = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		invitro_fertilization
+		pure_white_deadly
+	}
+}
+
+graphics_editing_software = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		digital_image_processing
+	}
+}
+
+internet_standards = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		graphics_editing_software
+	}
+}
+
+digital_telephone_answering_equipment = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		graphics_editing_software
+	}
+}
+
+environmental_panel_on_climate_change = {
+	era = era_6
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		early_climatology
+	}
+}
+
+#########################################################################
+################################# ERA 7 #################################
+#########################################################################
+postmodern_architecture = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_building_construction_sector_max_level_add = 10
+	}
+	unlocking_technologies = {
+		pressed_concrete
+	}
+}
+
+paperless_offices = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		postmodern_architecture
+	}
+}
+
+interest_rate_targeting = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		microfoundations
+	}
+}
+
+safe_sex_education = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	modifier = {
+		state_birth_rate_mult = -0.05
+	}
+	unlocking_technologies = {
+		antiretroviral_drugs
+		gene_therapy
+	}
+}
+
+the_triple_cocktail = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		safe_sex_education
+	}
+}
+
+m_theory = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		internet_standards
+	}
+}
+
+alternative_media = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		internet_standards
+		digital_telephone_answering_equipment
+	}
+}
+
+satellite_television = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		digital_telephone_answering_equipment
+	}
+}
+
+computer_generated_imagery = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		alternative_media
+	}
+}
+
+pre-war_advertising = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		alternative_media
+		satellite_television
+	}
+}
+
+ethnic_pluralism = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		social_studies
+	}
+}
+
+third_wave_feminism = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		ethnic_pluralism
+	}
+}
+
+information_superhighway = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		ethnic_pluralism
+	}
+}
+
+youth_subculture = {
+	era = era_7
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		ethnic_pluralism
+	}
+}
+
+#########################################################################
+################################# ERA 8 #################################
+#########################################################################
+advanced_econometrics = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		interest_rate_targeting
+	}
+}
+
+human_genome_sequencing = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		the_triple_cocktail
+	}
+}
+
+neuroimaging = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		human_genome_sequencing
+	}
+}
+
+social_networking = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		m_theory
+	}
+}
+
+sensationalism = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		social_networking
+	}
+}
+
+triple_a_videogames = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		computer_generated_imagery
+		pre-war_advertising
+	}
+}
+
+peer_to_peer_technology = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		pre-war_advertising
+	}
+}
+
+anti_terrorism = {
+	era = era_8
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		information_superhighway
+	}
+}
+
+#########################################################################
+################################# ERA 9 #################################
+#########################################################################
+advanced_game_theory = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		advanced_econometrics
+	}
+}
+
+cryptocurrency = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		advanced_game_theory
+	}
+}
+
+hiv_treatment = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		neuroimaging
+	}
+}
+
+cancer_immunotherapy = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		hiv_treatment
+	}
+}
+
+gene_editing = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		hiv_treatment
+	}
+}
+
+targeted_ads = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		sensationalism
+	}
+}
+
+social_surveillance = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		sensationalism
+	}
+}
+
+streaming_services = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		peer_to_peer_technology
+	}
+}
+
+meme_culture = {
+	era = era_9
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		anti_terrorism
+	}
+}
+
+#########################################################################
+################################# ERA 10 #################################
+#########################################################################
+behavioral_macroeconomics = {
+	era = era_10
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		advanced_game_theory
+	}
+}
+
+ai_art_generation = {
+	era = era_10
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		streaming_services
+	}
+}
+
+anti_authoritarian_rhetoric = {
+	era = era_10
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		meme_culture
+	}
+}
+
+#########################################################################
+################################# ERA 11 #################################
+#########################################################################
+quantum_econometrics = {
+	era = era_10
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		behavioral_macroeconomics
+	}
+}
+
+advanced_capitalism = {
+	era = era_10
+	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
+	category = society
+	unlocking_technologies = {
+		quantum_econometrics
+	}
+}

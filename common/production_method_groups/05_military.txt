@@ -1,0 +1,231 @@
+﻿# Barracks
+pmg_organization_barracks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_pre-war_infantry
+		pm_post-war_infantry
+		pm_2nd_generation_infantry
+		pm_3rd_generation_infantry
+		pm_4th_generation_infantry
+		pm_5th_generation_infantry
+		pm_6th_generation_infantry
+		pm_7th_generation_infantry
+		pm_8th_generation_infantry
+		pm_9th_generation_infantry
+	}
+}
+
+pmg_artillery_barracks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_artillery
+		pm_pre-war_artillery
+		pm_post-war_artillery
+		pm_2nd_generation_artillery
+		pm_3rd_generation_artillery
+		pm_4th_generation_artillery
+		pm_5th_generation_artillery
+		pm_6th_generation_artillery
+	}
+}
+
+pmg_reconnaissance_barracks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_visual_reconnaissance
+		pm_long_range_radios
+		pm_communication_satellites
+		pm_gps_reconnaissance
+		pm_fast_communications_network
+		pm_drone_based_reconnaissance
+	}
+}
+
+pmg_armoured_integration_barracks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_armoured_integration
+		pm_pre-war_tanks
+		pm_main_battle_tanks
+		pm_2nd_generation_tanks
+		pm_3rd_generation_tanks
+		pm_modernized_3rd_generation_tanks
+		pm_4th_generation_tanks
+	}
+}
+
+pmg_specialists_barracks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_specialists
+		pm_night_vision_devices
+		pm_nuclear_shells
+		pm_superheavy_machine_guns
+		pm_large_caliber_machine_guns
+		pm_grenade_launching_machine_guns
+		pm_20mm_autocannons
+		pm_amphibious_capability
+		pm_guided_missile_systems
+	}
+}
+
+pmg_aircraft_military = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_aircraft
+		pm_pre-war_military_aircraft
+		pm_post-war_fighters
+		pm_jet_fighters
+		pm_supersonic_jet_fighters
+		pm_3rd_generation_jet_fighters
+		pm_4th_generation_jet_fighters
+		pm_45th_generation_jet_fighters
+		pm_5th_generation_jet_fighters
+		pm_6th_generation_jet_fighters
+		pm_7th_generation_jet_fighters
+	}
+}
+
+pmg_medical_aid_barracks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_medical_aid
+		pm_vaccinated_troops
+		pm_field_anesthetics
+		pm_biological_boosters
+	}
+}
+
+# Conscription Centers
+pmg_organization_conscription = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_pre-war_infantry_conscription
+		pm_post-war_infantry_conscription
+		pm_2nd_generation_infantry_conscription
+		pm_3rd_generation_infantry_conscription
+		pm_4th_generation_infantry_conscription
+		pm_5th_generation_infantry_conscription
+		pm_6th_generation_infantry_conscription
+		pm_7th_generation_infantry_conscription
+		pm_8th_generation_infantry_conscription
+		pm_9th_generation_infantry_conscription
+	}
+}
+
+pmg_artillery_conscription = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_artillery_conscription
+		pm_pre-war_artillery_conscription
+		pm_post-war_artillery_conscription
+		pm_2nd_generation_artillery_conscription
+		pm_3rd_generation_artillery_conscription
+		pm_4th_generation_artillery_conscription
+		pm_5th_generation_artillery_conscription
+		pm_6th_generation_artillery_conscription
+	}
+}
+
+pmg_reconnaissance_conscription = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_visual_reconnaissance_conscription
+		pm_long_range_radios_conscription
+		pm_communication_satellites_conscription
+		pm_gps_reconnaissance_conscription
+		pm_fast_communications_network_conscription
+		pm_drone_based_reconnaissance_conscription
+	}
+}
+
+pmg_armoured_integration_conscription = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_armoured_integration_conscription
+		pm_pre-war_tanks_conscription
+		pm_main_battle_tanks_conscription
+		pm_2nd_generation_tanks_conscription
+		pm_3rd_generation_tanks_conscription
+		pm_modernized_3rd_generation_tanks_conscription
+		pm_4th_generation_tanks_conscription
+	}
+}
+
+pmg_medical_aid_conscription = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_medical_aid
+		pm_vaccinated_troops
+		pm_field_anesthetics
+		pm_biological_boosters
+	}
+}
+
+# Naval Base
+pmg_organization_naval_base = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_naval_theory
+		pm_pre-war_communication_systems
+		pm_synthetic_aperture_radar
+		pm_improved_sensory_equipment
+		pm_gps_coordination_systems
+		pm_fast_communication_systems
+	}
+}
+
+pmg_surface_ships = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_pre-war_surface_ships
+		pm_large_surface_ships
+		pm_3rd_generation_surface_ships
+		pm_4th_generation_surface_ships
+		pm_5th_generation_surface_ships
+		pm_6th_generation_surface_ships
+		pm_7th_generation_surface_ships
+		pm_8th_generation_surface_ships
+		pm_9th_generation_surface_ships
+	}
+}
+
+pmg_aircraft_carrier = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_aircraft_carrier
+		pm_aircraft_carriers
+		pm_improved_aircraft_carriers
+		pm_nuclear_supercarriers
+		pm_larger_nuclear_aircraft_carriers
+		pm_5th_generation_aircraft_carriers
+	}
+}
+
+pmg_submarines = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_no_submarines
+		pm_submarines
+		pm_improved_submarine
+		pm_nuclear_submarine
+		pm_improved_hull_submarine
+		pm_lead_cooled_fast_reactor_submarine
+	}
+}

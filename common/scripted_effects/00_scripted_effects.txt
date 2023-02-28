@@ -1,0 +1,70 @@
+﻿#	Example:
+# 
+#	example_effect = {
+#		x = 100
+#		y = 50
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+save_neighbor_with_state = {
+	random_neighbouring_state = {
+		limit = {
+			owner = {
+				$CRITERIA$
+			}
+		}
+		save_scope_as = neighbor_state
+		owner = {
+			save_scope_as = neighbor_country
+		}
+		random_neighbouring_state = {
+			limit = {
+				owner = ROOT
+			}
+			save_scope_as = neighbor_neighbor_state
+		}
+	}
+}
+
+scripted_effect_parties_emergence = {
+	if = {
+		limit = {
+			country_has_voting_franchise = no
+		}
+		custom_tooltip = PARTIES_EMERGENCE
+	}
+	# Will immediately trigger elections and thus update parties so no need to call update_party_support here
+}
+
+scripted_effect_parties_disappearance = {
+	if = {
+		limit = {
+			country_has_voting_franchise = yes
+		}
+		custom_tooltip = PARTIES_DISAPPEARANCE
+	}
+	deactivate_parties = yes
+}
+
+liberate_slaves = {
+	every_scope_pop = {
+		limit = {
+			is_pop_type = slaves
+		}
+		if = {
+			limit = {
+				is_employed = yes
+			}
+			change_poptype = workplace.type.slaves_role
+		}
+		else = {
+			change_poptype = pop_type:laborers
+		}
+	}
+}

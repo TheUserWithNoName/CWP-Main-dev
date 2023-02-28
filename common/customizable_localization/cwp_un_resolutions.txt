@@ -1,0 +1,44 @@
+﻿current_resolution = {
+	type = country
+	text = {
+		trigger = {
+			has_journal_entry = je_declaration_of_human_rights
+		}
+		localization_key = "je_declaration_of_human_rights"
+	}
+	text = {
+		localization_key = "NO_CURRENT_RESOLUTION"
+	}
+}
+
+pending_resolution_loc = {
+	type = country
+	text = {
+		trigger = {
+			has_global_variable = pending_resolution
+		}
+		localization_key = "yes"
+	}
+	text = {
+		localization_key = "no"
+	}
+}
+
+un_voting_balance = {
+	type = country
+	text = {
+		trigger = {
+			un_support_value >= un_oppose_value
+		}
+		localization_key = "UN_WINNING_BALANCE"
+	}
+	text = {
+		trigger = {
+			un_oppose_value >= un_support_value
+		}
+		localization_key = "UN_LOSING_BALANCE"
+	}
+	text = {
+		localization_key = "UN_NONE_BALANCE"
+	}
+}

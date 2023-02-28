@@ -1,0 +1,12 @@
+#temp folder for working files
+/temp
+/utils
+
+#vscode
+.vscode
+Cold-War-Project.code-workspace
+
+#mac
+.ds_store
+*.ipynb
+*.xlsx

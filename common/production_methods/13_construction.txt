@@ -1,0 +1,255 @@
+﻿pm_pre-war_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	is_default = yes
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_fabric_add = 15
+			building_input_glass_add = 10
+			building_input_wood_add = 35
+			building_input_steel_add = 20
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 750
+			building_employment_clerks_add = 750
+			building_employment_laborers_add = 3500
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.005
+		}
+	}
+}
+
+pm_prefabricated_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	unlocking_technologies = {
+		prefabrication
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 5
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_steel_add = 30
+			building_input_glass_add = 20
+			building_input_aluminum_add = 20
+			building_input_copper_add = 20
+			building_input_tools_add = 10
+			building_input_electricity_add = 10
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 750
+			building_employment_clerks_add = 750
+			building_employment_machinists_add = 750
+			building_employment_laborers_add = 2750
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.01
+		}
+	}
+}
+
+pm_tube_bundled_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
+	unlocking_technologies = {
+		tube_bundled_systems
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 10
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_steel_add = 45
+			building_input_glass_add = 20
+			building_input_aluminum_add = 30
+			building_input_copper_add = 20
+			building_input_plastics_add = 20
+			building_input_tools_add = 15
+			building_input_electricity_add = 15
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 750
+			building_employment_clerks_add = 750
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 750
+			building_employment_laborers_add = 1250
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.015
+		}
+	}
+}
+
+pm_pressed_concrete = {
+	texture = "gfx/interface/icons/production_method_icons/arc_welded_buildings.dds"
+	unlocking_technologies = {
+		pressed_concrete
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 20
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_tools_add = 20
+			building_input_steel_add = 50
+			building_input_glass_add = 25
+			building_input_aluminum_add = 40
+			building_input_copper_add = 20
+			building_input_plastics_add = 25
+			building_input_electricity_add = 20
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 750
+			building_employment_clerks_add = 750
+			building_employment_engineers_add = 1500
+			building_employment_machinists_add = 2000
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.02
+		}
+	}
+}
+
+# Housing allocation pmg
+pm_pre_war_housing = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	state_modifiers = {
+		level_scaled = {
+			state_building_housing_max_level_add = 1
+		}
+	}
+}
+
+pm_prefabricated_housing = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	unlocking_production_methods = {
+		pm_prefabricated_buildings
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_building_housing_max_level_add = 2
+		}
+	}
+}
+
+pm_tube_bundled_housing = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	unlocking_production_methods = {
+		pm_tube_bundled_buildings
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_building_housing_max_level_add = 3
+		}
+	}
+}
+
+pm_pressed_concrete_housing = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	unlocking_production_methods = {
+		pm_pressed_concrete
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_building_housing_max_level_add = 4
+		}
+	}
+}
+
+# Housing
+pm_base_housing = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+			building_output_housing_add = 50
+		}
+	}
+}
+
+# housing ownership
+pm_landlord_owned_housing = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	unlocking_production_methods = {
+	}
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 200
+			building_employment_aristocrats_add = 200
+		}
+		unscaled = {
+			building_capitalists_shares_add = 5
+			building_aristocrats_shares_add = 5
+		}
+	}
+}
+
+pm_publicly_traded_housing = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	unlocking_technologies = {
+	}
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 400
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+		}
+	}
+}
+
+pm_government_owned_housing = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	unlocking_laws = {
+		law_command_economy
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 400
+		}
+		unscaled = {
+			building_government_shares_add = 1
+		}
+	}
+}
+
+pm_worker_cooperative_housing = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 400
+		}
+		unscaled = {
+			building_workforce_shares_add = 1
+		}
+	}
+}

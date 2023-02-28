@@ -1,0 +1,1056 @@
+﻿# Food Industry
+pmg_base_building_food_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_improved_food_manufactories
+		pm_genetically_modified_foods
+	}
+}
+
+pmg_food_packaging = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_preservatives_food_manufactories
+		pm_packaging_food_manufactories
+		pm_food_scanning_food_manufactories
+		pm_universal_product_code_food_manufactories
+		pm_rfids_food_manufactories
+	}
+}
+
+pmg_distilling = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_distillery
+		pm_improved_distillation_food_manufactories
+		pm_patent_stills
+	}
+}
+
+pmg_automation_food = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_food = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Textile Manufactories
+pmg_base_textile = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_fiber_production_textiles
+		pm_synthetic_fiber_production_textiles
+		pm_spinnerets_textiles
+		pm_technical_textiles_textiles
+		pm_3d_printed_clothes_textiles
+	}
+}
+
+pmg_luxury_textiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_luxury_textiles
+		pm_luxury_textiles_production
+		pm_improved_luxury_textiles
+	}
+}
+
+pmg_accessories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_jewelry_no
+		pm_jewelry
+	}
+}
+
+pmg_automation_textiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_textiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Furniture Manufactories
+pmg_base_furniture = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_fiber_production_furniture
+		pm_synthetic_fiber_production_furniture
+		pm_spinnerets_furniture
+		pm_technical_textiles_furniture
+		pm_3d_printed_furniture
+	}
+}
+
+pmg_luxury_furniture = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_luxury_furniture
+		pm_luxury_furniture_production
+		pm_improved_luxury_furniture
+	}
+}
+
+pmg_automation_furniture = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_furniture = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+### SYNTHETICS PLANTS
+pmg_synthetic_fabrics = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_nylon
+		pm_polyester
+		pm_carbon_fibers
+		pm_conducive_smart_fabric
+	}
+}
+
+pmg_synthetic_rubber = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_rubber
+		pm_styrene_butadiene
+		pm_silicone
+	}
+}
+
+pmg_automation_synthetics_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_synthetics_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Glassworks
+pmg_base_glassworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_glassworking
+		pm_float_glass_process
+		pm_polypropylene_process
+		pm_oxygen_concentrators_glass
+		pm_laminated_glass
+	}
+}
+
+pmg_automation_glassworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_glassworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Tool Manufactories
+pmg_base_tools = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_base_tools
+		pm_power_tools
+		pm_automated_tools
+	}
+}
+
+pmg_automation_tools = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_tools = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Paper Manufactories
+pmg_base_paper = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_base_paper
+		pm_laminated_paper
+	}
+}
+
+pmg_automation_paper = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_paper = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Chemical Plants
+pmg_base_fertilizer = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_fertilizer_plant
+		pm_organophosphates_fertilizer
+		pm_synthetic_fertilizers
+	}
+}
+
+pmg_base_explosives = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_explosives_production
+		pm_rudimentary_explosives
+		pm_teflon_chemicals
+		pm_plastic_explosives
+		pm_advanced_explosives
+	}
+}
+
+pmg_base_dyes = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_synthetic_dye
+		pm_coal_tar_dyes
+		pm_chemical_dyes
+		pm_metallic_dyes
+	}
+}
+
+pmg_automation_chemical_plants = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_chemical_plants = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Steelworks and Aluminum Refineries
+pmg_base_steelworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_early_steelmaking
+		pm_basic_oxygen_steelmaking
+		pm_bottom_blown_converters
+		pm_oxygen_concentrators_steelmaking
+		pm_vacuum_arc_remelting
+	}
+}
+
+pmg_base_aluminum_refining = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_hall_heroult_process
+		pm_hoopes_process
+		pm_prebaked_carbon_anodes
+		pm_vacuum_arc_remelting_aluminum_refining
+	}
+}
+
+pmg_automation_steelworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_steelworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Motor Industry
+pmg_base_motors = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_combustion_gas_engines_motors
+		pm_high_compression_engines_motors
+		pm_transverse_engines_motors
+		pm_stirling_engines_motors
+	}
+}
+
+pmg_electronic_improvements_motors = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_electronics_motors
+		pm_computer_adjusted_measurements_motors
+		pm_integrated_circuit_motors_motors
+		pm_laser_measurement_devices_motors
+	}
+}
+
+pmg_automation_motors = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_motors = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Automobile Manufactories
+pmg_base_automobiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_automobiles
+		pm_automobile_standardization
+		pm_compact_cars
+		pm_mpvs
+		pm_self_driving_cars
+		pm_fully_autonomous_cars
+	}
+}
+
+pmg_engine_improvements = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_combustion_gas_engines_automobiles
+		pm_high_compression_engines_automobiles
+		pm_transverse_engines_automobiles
+		pm_stirling_engines_automobiles
+	}
+}
+
+pmg_propulsion_automobiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_refined_oil_production
+		pm_natural_gas_propulsion
+		pm_electric_propulsion
+	}
+}
+
+pmg_automation_automobiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_automobiles = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Shipyards
+pmg_base_shipyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_cargo_ships
+		pm_larger_designs_shipyard
+		pm_container_ships
+	}
+}
+
+pmg_aircraft_carrier_shipyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_aircraft_carriers
+		pm_fleet_carriers
+		pm_supercarriers
+		pm_nuclear_supercarriers
+	}
+}
+
+pmg_surface_ships_shipyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_surface_fleet
+		pm_varied_surface_ships
+		pm_nuclear_surface_ships
+		pm_aircraft_cruisers
+	}
+}
+
+pmg_submarines_shipyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_submarines
+		pm_ballistic_submarines
+		pm_nuclear_submarines
+		pm_titanium_alloy_submarines
+	}
+}
+
+pmg_automation_shipyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_shipyard = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Advanced Military Manufactories
+pmg_base_tanks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_tanks_prod
+		pm_1st_gen_mbt_ami
+		pm_2nd_gen_mbt_ami
+		pm_3rd_gen_mbt_ami
+		pm_35th_gen_mbt_ami
+		pm_4th_gen_mbt_ami
+	}
+}
+
+pmg_military_aircraft = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_aircraft_production
+		pm_pre-war_military_aircraft
+		pm_jet_fighters_prod
+		pm_2nd_gen_jet_fighters
+		pm_3rd_gen_jet_fighters
+		pm_4th_gen_jet_fighters
+		pm_5th_gen_jet_fighters
+		pm_6th_gen_jet_fighters
+		pm_7th_gen_jet_fighters
+	}
+}
+
+pmg_automation_advanced_military_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_advanced_military_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Electronics Manufactories
+pmg_base_electronics = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_electronics
+		pm_von_neumann_architecture_electronics
+		pm_circuit_integrated_electronics
+	}
+}
+
+pmg_automation_electronics = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_electronics = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Small Arms
+pmg_base_small_arms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_semi_automatic_rifles
+		pm_assault_rifles
+		pm_battle_rifles
+	}
+}
+
+pmg_base_artillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_artillery
+		pm_pre_war_artillery
+		pm_gas_propelled_artillery
+		pm_5th_gen_artillery
+		pm_gps_integrated_artillery
+	}
+}
+
+pmg_electronic_improvements_small_arms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_electronics
+		pm_electronics_integrated_guns
+	}
+}
+
+pmg_automation_small_arms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_small_arms = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Munition Plants
+pmg_base_munitions = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_ammunition
+		pm_standardized_cartridges
+		pm_detachable_magazines
+		pm_expanded_magazines
+	}
+}
+
+pmg_automation_munitions = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_munitions = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Fuel Refineries
+pmg_base_fuel_refineries = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_oil_refineries
+		pm_dense_oil_transportation
+	}
+}
+
+pmg_raw_plastics = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_plastics
+		pm_rudimentary_polymers
+		pm_transition_metal_catalysts
+	}
+}
+
+pmg_automation_fuel_refineries = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_fuel_refineries = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Semiconductor Manufactories
+pmg_base_semiconductor = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_integrated_circuits_semiconductors
+		pm_single_chip_processors_semiconductors
+		pm_microprocessors_semiconductors
+		pm_miniaturized_microprocessors_semiconductors
+	}
+}
+
+pmg_automation_semiconductor = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_semiconductor = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Aircraft Manufactories
+pmg_base_aircraft_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_aircraft
+		pm_passenger_jets
+		pm_supersonic_jets
+	}
+}
+
+pmg_electronic_improvements_aircraft = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_electronics
+		pm_electronics_integrated_aircraft
+	}
+}
+
+pmg_automation_aircraft = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_aircraft = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Uranium Refineries
+pmg_base_uranium_refineries = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_radium_e_refineries
+		pm_calutron
+	}
+}
+
+pmg_ownership_uranium_refineries = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Battery Manufactories
+pmg_base_battery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_alkaline_batteries
+		pm_lithium_iron_batteries
+	}
+}
+
+pmg_automation_battery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_battery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Pharmaceutical Industry
+pmg_base_pharmaceuticals = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_modern_medicine
+		pm_synthetic_medicines
+	}
+}
+
+pmg_opioids = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_opiates
+		pm_opiate_refinement
+		pm_opiate_enhancement
+	}
+}
+
+pmg_recreational_pharmaceuticals = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_recreational_drug_production
+		pm_recreational_drugs
+	}
+}
+
+pmg_automation_pharmaceuticals = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_pharmaceuticals = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Television Manufactories
+pmg_base_television_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_televisions
+		pm_color_televisions
+		pm_led_televisions
+		pm_oled_televisions
+	}
+}
+
+pmg_automation_television_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_television_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Radio Manufactories
+pmg_base_radio_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pre-war_radios
+		pm_transistor_radios
+	}
+}
+
+pmg_automation_radio_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_radio_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Computer Manufactories
+pmg_base_computers = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_von_neumann_computers
+		pm_stored_program_computers
+		pm_transistor_computers
+		pm_microcomputers
+		pm_advanced_computers
+		pm_quantum_computers
+	}
+}
+
+pmg_automation_computers = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_computers = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+# Household Appliance Manufactories
+pmg_base_household_appliance_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_household_appliance_manufacturing
+		pm_mass_appliance_manufacturing
+	}
+}
+
+pmg_automation_household_appliance_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_automation
+		pm_powered_assembly_lines_industry
+		pm_semi_automated_assembly_lines_industry
+		pm_discrete_manufacturing_industry
+		pm_turnover_conveyor_belt_system_industry
+		pm_lean_manufacturing_industry
+	}
+}
+
+pmg_ownership_household_appliance_manufactories = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded_industry
+		pm_government_run_industry
+		pm_worker_cooperatives_industry
+	}
+}
+
+pmg_professional_service_use = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_professional_service_industry_no
+		pm_professional_service_industry
+		pm_professional_service_industry_extensive
+		pm_professional_service_industry_integrated
+	}
+}

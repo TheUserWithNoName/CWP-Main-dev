@@ -1,0 +1,16 @@
+﻿COUNTRIES = {
+	c:SWI = {
+		# Politics
+		set_variable = {
+			name = un_observer
+			value = 0
+		}
+		#todo IGs and Ideologies
+		# Tech and Tax
+		effect_starting_pop_wealth_very_high = yes
+		set_tax_level = high
+		effect_starting_technology_tier_2_tech = yes
+		# Laws
+		# Institutions
+	}
+}
