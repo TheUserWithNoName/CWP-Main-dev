@@ -84,6 +84,7 @@
 				level = 1
 				reserves = 1
 				activate_production_methods = {
+					
 				}
 			}
 			create_building = {
@@ -113,7 +114,7 @@
 				level = 8
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
@@ -142,49 +143,8 @@
 					pm_publicly_traded_farm
 				}
 			}
-			create_building = {
-				building = building_small_arms_manufactories
-				level = 12
-				reserves = 1
-				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_pre_war_artillery
-					pm_government_run_industry
-					pm_powered_assembly_lines_industry
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_ammunition
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_advanced_military_manufactories
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_1st_gen_mbt_ami
-					pm_pre-war_military_aircraft
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_motor_industry
-				level = 15
-				reserves = 1
-				activate_production_methods = {
-					pm_combustion_gas_engines_motors
-					pm_no_electronics_motors
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
+			
 			create_building = {
 				building = building_port
 				level = 7
@@ -204,16 +164,7 @@
 					pm_publicly_traded_building_railway
 				}
 			}
-			create_building = {
-				building = building_tool_manufactories
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_base_tools
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
 			create_building = {
 				building = building_construction_sector
 				level = 10
@@ -225,7 +176,7 @@
 			}
 			create_building = {
 				building = building_power_plant
-				level = 20
+				level = 15
 				reserves = 1
 				activate_production_methods = {
 					pm_coal_fired_plant
@@ -237,12 +188,12 @@
 				level = 10
 				reserves = 1
 				activate_production_methods = {
-					pm_post-war_infantry
-					pm_post-war_artillery
+					pm_pre-war_infantry
+					pm_pre-war_artillery
 					pm_long_range_radios
 					pm_main_battle_tanks
 					pm_no_specialists
-					pm_post-war_fighters
+					pm_postwar_fighters
 					pm_vaccinated_troops
 				}
 			}
@@ -299,7 +250,7 @@
 				level = 10
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
@@ -316,58 +267,18 @@
 				}
 			}
 			create_building = {
-				building = building_small_arms_manufactories
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_pre_war_artillery
-					pm_government_run_industry
-					pm_powered_assembly_lines_industry
-				}
-			}
-			create_building = {
-				building = building_chemical_plants
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_fertilizer_plant
-					pm_teflon_chemicals
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_ammunition
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_tool_manufactories
-				level = 6
-				reserves = 1
-				activate_production_methods = {
-					pm_base_tools
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
 				building = building_textile_manufactories
-				level = 35
+				level = 40
 				reserves = 1
 				activate_production_methods = {
 					pm_fiber_production_textiles
 					pm_no_luxury_textiles
 					pm_powered_assembly_lines_industry
 					pm_privately_owned_industry
+				
 				}
 			}
+			
 			create_building = {
 				building = building_port
 				level = 8
@@ -376,36 +287,7 @@
 					pm_basic_port
 				}
 			}
-			create_building = {
-				building = building_shipyards
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_cargo_ships
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
-				building = building_fuel_refineries
-				level = 12
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_oil_refineries
-					pm_no_automation
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
-				building = building_paper_manufactories
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_base_paper
-					pm_no_automation
-					pm_publicly_traded_industry
-				}
-			}
+			
 			create_building = {
 				building = building_railway
 				level = 6
@@ -437,23 +319,13 @@
 				level = 8
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
 				}
 			}
-			create_building = {
-				building = building_small_arms_manufactories
-				level = 2
-				reserves = 1
-				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_pre_war_artillery
-					pm_government_run_industry
-					pm_powered_assembly_lines_industry
-				}
-			}
+			
 			create_building = {
 				building = building_fishing_wharf
 				level = 2
@@ -507,16 +379,7 @@
 					pm_publicly_traded_building_railway
 				}
 			}
-			create_building = {
-				building = building_paper_manufactories
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_base_paper
-					pm_no_automation
-					pm_publicly_traded_industry
-				}
-			}
+			
 		}
 	}
 	s:STATE_YORKSHIRE = {
@@ -529,16 +392,7 @@
 					pm_basic_port
 				}
 			}
-			create_building = {
-				building = building_shipyards
-				level = 8
-				reserves = 1
-				activate_production_methods = {
-					pm_cargo_ships
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
 			create_building = {
 				building = building_coal_mine
 				level = 40
@@ -573,6 +427,17 @@
 				}
 			}
 			create_building = {
+				building = building_logging_camp
+				level = 8
+				reserves = 1
+				activate_production_methods = {
+					pm_electric_saw_mills
+					pm_no_equipment
+					pm_manual_transportation
+					pm_publicly_traded_misc
+				}
+			}
+			create_building = {
 				building = building_fishing_wharf
 				level = 7
 				reserves = 1
@@ -592,37 +457,9 @@
 					pm_industry_construction
 				}
 			}
-			create_building = {
-				building = building_steelworks
-				level = 12
-				reserves = 1
-				activate_production_methods = {
-					pm_early_steelmaking
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
-				building = building_chemical_plants
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_fertilizer_plant
-					pm_teflon_chemicals
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_ammunition
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
+			
+			
+			
 			create_building = {
 				building = building_railway
 				level = 5
@@ -654,7 +491,7 @@
 				level = 10
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
@@ -733,33 +570,36 @@
 				level = 8
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
 				}
 			}
 			create_building = {
-				building = building_small_arms_manufactories
-				level = 5
+				building = building_steelworks
+				level = 20
 				reserves = 1
 				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_pre_war_artillery
-					pm_government_run_industry
-					pm_powered_assembly_lines_industry
-				}
-			}
-			create_building = {
-				building = building_tool_manufactories
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_base_tools
+					pm_early_steelmaking
 					pm_powered_assembly_lines_industry
 					pm_publicly_traded_industry
 				}
 			}
+			create_building = {
+				building = building_chemical_plants
+				level = 20
+				reserves = 1
+				activate_production_methods = {
+					pm_pre-war_fertilizer_plant
+					pm_plastic_explosives
+					pm_coal_tar_dyes
+					pm_powered_assembly_lines_industry
+					pm_publicly_traded_industry
+				}
+			}
+			
+			
 			create_building = {
 				building = building_railway
 				level = 2
@@ -780,17 +620,7 @@
 					pm_publicly_traded_urban
 				}
 			}
-			create_building = {
-				building = building_motor_industry
-				level = 12
-				reserves = 1
-				activate_production_methods = {
-					pm_combustion_gas_engines_motors
-					pm_no_electronics_motors
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
 		}
 	}
 	s:STATE_EAST_ANGLIA = {
@@ -832,7 +662,7 @@
 				level = 4
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
@@ -878,16 +708,7 @@
 					pm_publicly_traded_building_railway
 				}
 			}
-			create_building = {
-				building = building_shipyards
-				level = 4
-				reserves = 1
-				activate_production_methods = {
-					pm_cargo_ships
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
 			create_building = {
 				building = building_rye_farm
 				level = 22
@@ -899,16 +720,7 @@
 					pm_publicly_traded_farm
 				}
 			}
-			create_building = {
-				building = building_fuel_refineries
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_oil_refineries
-					pm_no_automation
-					pm_publicly_traded_industry
-				}
-			}
+			
 		}
 	}
 	s:STATE_WEST_COUNTRY = {
@@ -940,7 +752,7 @@
 				level = 5
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
@@ -977,57 +789,11 @@
 					pm_basic_port
 				}
 			}
-			create_building = {
-				building = building_shipyards
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_cargo_ships
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			create_building = {
-				building = building_carrier_drydocks
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_aircraft_carriers
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_surface_ship_drydocks
-				level = 15
-				reserves = 1
-				activate_production_methods = {
-					pm_surface_fleet
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			building_submarine_drydocks = {
-				building = building_surface_ship_drydocks
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_submarines
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_small_arms_manufactories
-				level = 5
-				reserves = 1
-				activate_production_methods = {
-					pm_semi_automatic_rifles
-					pm_pre_war_artillery
-					pm_government_run_industry
-					pm_powered_assembly_lines_industry
-				}
-			}
+			
+			
+			
+			
+			
 			create_building = {
 				building = building_railway
 				level = 2
@@ -1041,15 +807,15 @@
 			}
 			create_building = {
 				building = building_barracks
-				level = 25
+				level = 10
 				reserves = 1
 				activate_production_methods = {
-					pm_post-war_infantry
-					pm_post-war_artillery
+					pm_pre-war_infantry
+					pm_pre-war_artillery
 					pm_long_range_radios
 					pm_main_battle_tanks
 					pm_no_specialists
-					pm_post-war_fighters
+					pm_postwar_fighters
 					pm_vaccinated_troops
 				}
 			}
@@ -1073,7 +839,7 @@
 				level = 12
 				reserves = 1
 				activate_production_methods = {
-					pm_simple_forestry
+					pm_electric_saw_mills
 					pm_no_equipment
 					pm_manual_transportation
 					pm_publicly_traded_misc
@@ -1090,46 +856,8 @@
 					pm_publicly_traded_misc
 				}
 			}
-			create_building = {
-				building = building_shipyards
-				level = 20
-				reserves = 1
-				activate_production_methods = {
-					pm_cargo_ships
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
-			building_submarine_drydocks = {
-				building = building_surface_ship_drydocks
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_submarines
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_munition_plants
-				level = 10
-				reserves = 1
-				activate_production_methods = {
-					pm_pre-war_ammunition
-					pm_powered_assembly_lines_industry
-					pm_government_run_industry
-				}
-			}
-			create_building = {
-				building = building_tool_manufactories
-				level = 14
-				reserves = 1
-				activate_production_methods = {
-					pm_base_tools
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
+			
 			create_building = {
 				building = building_livestock_ranch
 				level = 18
@@ -1177,15 +905,15 @@
 			}
 			create_building = {
 				building = building_barracks
-				level = 10
+				level = 5
 				reserves = 1
 				activate_production_methods = {
-					pm_post-war_infantry
-					pm_post-war_artillery
+					pm_pre-war_infantry
+					pm_pre-war_artillery
 					pm_long_range_radios
 					pm_main_battle_tanks
 					pm_no_specialists
-					pm_post-war_fighters
+					pm_postwar_fighters
 					pm_vaccinated_troops
 				}
 			}
@@ -1227,30 +955,11 @@
 					pm_publicly_traded_farm
 				}
 			}
-			create_building = {
-				building = building_textile_manufactories
-				level = 15
-				reserves = 1
-				activate_production_methods = {
-					pm_fiber_production_textiles
-					pm_luxury_textiles_production
-					pm_powered_assembly_lines_industry
-					pm_privately_owned_industry
-				}
-			}
-			create_building = {
-				building = building_shipyards
-				level = 15
-				reserves = 1
-				activate_production_methods = {
-					pm_cargo_ships
-					pm_powered_assembly_lines_industry
-					pm_publicly_traded_industry
-				}
-			}
+			
+			
 			create_building = {
 				building = building_port
-				level = 2
+				level = 4
 				reserves = 1
 				activate_production_methods = {
 					pm_basic_port
